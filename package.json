@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap && lerna exec npm install",
+    "build": "lerna run build",
+    "investor-dev": "lerna run --scope investor development",
+    "storybook-build": "lerna run --scope @raj23manj/components-lib build",
+    "storybook-dev": "lerna run --scope @raj23manj/components-lib storybook"
+  }
+}
